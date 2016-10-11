@@ -29,7 +29,6 @@ server.register([require('vision')], (err) => {
             html: require('handlebars')
         },
         relativeTo: Path.join(__dirname, 'src/views'),
-        helpersPath: '_helpers',
         layoutPath: '_layouts',
         layout: 'default',
     });
