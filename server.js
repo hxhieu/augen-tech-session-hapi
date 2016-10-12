@@ -41,6 +41,12 @@ server.register([require('vision')], (err) => {
         handler: require('./src/views/home')
     });
 
+    server.route({
+        method: 'GET',
+        path: '/customers',
+        handler: require('./src/views/customers')
+    });
+
     // Start the server
     server.start((err) => {
 

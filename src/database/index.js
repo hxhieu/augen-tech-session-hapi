@@ -45,7 +45,7 @@ var models = {
             },
 
             buyPrice: {
-                type: Sequelize.FLOAT, 
+                type: Sequelize.FLOAT,
                 field: 'StandardCost'
             },
 
@@ -55,10 +55,37 @@ var models = {
             }
         },
         defaultModelOptions
+    ),
+    customer: sequelize.define(
+        'Customer',
+        {
+            id: {
+                type: Sequelize.INTEGER,
+                field: 'CustomerID',
+                primaryKey: true
+            },
+
+            firstName: {
+                type: Sequelize.STRING,
+                field: 'FirstName'
+            },
+
+            lastName: {
+                type: Sequelize.STRING,
+                field: 'LastName'
+            },
+
+            email: {
+                type: Sequelize.STRING,
+                field: 'EmailAddress'
+            }
+        },
+        defaultModelOptions
     )
 };
 
 module.exports = {
     connection: sequelize,
-    Product: models.product
+    Product: models.product,
+    Customer: models.customer
 };
