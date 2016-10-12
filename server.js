@@ -19,7 +19,7 @@ const server = new Hapi.Server({
 
 server.connection({
     host: process.env.HOST || '0.0.0.0',
-    port: process.env.PORT || 8080
+    port: process.env.PORT || 1337
 });
 
 server.register([require('vision')], (err) => {
